@@ -7,5 +7,5 @@ module "kmskeynames" {
   kms_key_name = each.value.kms_key_name
   key_ring     = each.value.key_ring
 
-  depends_on = [module.kmskeyrings]
+  #depends_on = [module.kmskeyrings]
 }

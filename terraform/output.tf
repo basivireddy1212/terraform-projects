@@ -7,10 +7,10 @@
 #  value = module.service-accounts
 #}
 
-output "keyrings" {
+#output "keyrings" {
   #    value = { for k, v in module.kmskeyring : k => v.kms_key_ring_id }
-  value = module.kmskeyrings
-}
+#  value = module.kmskeyrings
+#}
 
 output "keynames" {
   #    value = { for k, v in module.kmskeynames : k => v.kms_key_name }
