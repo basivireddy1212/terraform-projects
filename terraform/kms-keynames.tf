@@ -1,6 +1,6 @@
 #in GCP, Key Rings (KMS KeyRings) cannot be deleted once created.
 module "kmskeynames" {
-    source = "git::ssh://git@gitlab.com/basivireddy1212/terraform-lib///terraform-modules/kms-keynames?ref=v1.0.0"
+    source = "git::https://github.com/basivireddy1212/terraform-modules/kms-keynames?ref=main"
     # for local testing
     # source = "../../terraform-modules/kms-keynames"
     for_each = var.keynames

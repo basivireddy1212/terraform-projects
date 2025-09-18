@@ -55,7 +55,7 @@ jobs:
 
       # Plan
       - name: Terraform Plan
-        run: terraform plan -out=tfplan
+        run: terraform plan -var-file=env/dev/terraform.tfvars -out=tfplan
         working-directory: terraform
 
       # Upload Plan as artifact (useful in PRs)
