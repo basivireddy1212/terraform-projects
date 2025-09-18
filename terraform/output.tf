@@ -8,7 +8,7 @@
 #}
 
 #output "keyrings" {
-  #    value = { for k, v in module.kmskeyring : k => v.kms_key_ring_id }
+#    value = { for k, v in module.kmskeyring : k => v.kms_key_ring_id }
 #  value = module.kmskeyrings
 #}
 
