@@ -17,13 +17,13 @@ resource "google_compute_region_disk" "region_disk" {
 */
 
 module "buckets" {
-    source = "git::https://github.com/basivireddy1212/terraform-apps-lib//bucket"
-    for_each = var.buckets
-    name = each.value.name
-    location = each.value.location
-    environment = var.environment
-    project_id = var.project_id
-    organization_labels = var.organization_labels
+  source              = "git::https://github.com/basivireddy1212/terraform-apps-lib//bucket"
+  for_each            = var.buckets
+  name                = each.value.name
+  location            = each.value.location
+  environment         = var.environment
+  project_id          = var.project_id
+  organization_labels = var.organization_labels
 
 }
 

@@ -1,57 +1,57 @@
 variable "project_id" {
-    type = string
+  type = string
 }
 
 variable "region" {
-    type = string
+  type = string
 }
 
 variable "zones" {
-    type = list(string)
+  type = list(string)
 }
 
 variable "environment" {
-    type = string
+  type = string
 }
 
 variable "region_disks" {
-    default = {}
+  default = {}
 }
 
 variable "buckets" {
-    type = map(object({
-        name = string
-        location = string
-    }))
+  type = map(object({
+    name     = string
+    location = string
+  }))
 }
 
 variable "organization_labels" {
-    type = object({
-        purpose = string
-    })
+  type = object({
+    purpose = string
+  })
 }
 
 variable "service_accounts" {
-    type = any
-  
+  type = any
+
 }
 
-variable "keyrings" {   
-    type = map(object({
-        kms_key_ring_name = string
-        location = string
-        project_id = string
-        default = bool
-    }))
-  
+variable "keyrings" {
+  type = map(object({
+    kms_key_ring_name = string
+    location          = string
+    project_id        = string
+    default           = bool
+  }))
+
 }
 
 variable "keynames" {
-    type = map(object({
-        kms_key_name = string
-        key_ring = string
-    }))
-  
+  type = map(object({
+    kms_key_name = string
+    key_ring     = string
+  }))
+
 }
 
 
