@@ -34,15 +34,24 @@ jobs:
         run: terraform init
         working-directory: terraform
 
-      # Format check
-      - name: Terraform Format
+      # Format check - Style / formatting
+      - name: Terraform Format  
         run: terraform fmt -check
         working-directory: terraform
 
-      # Validate
+      # Validate - syntax and internal consistency
       - name: Terraform Validate
         run: terraform validate
         working-directory: terraform
+
+      # Lint - best practices & provider checks
+      - name: Terraform Lint
+        uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_version: latest
+      - run: tflint --recursive
+
+
 
       # Plan
       - name: Terraform Plan
